@@ -4,7 +4,7 @@
 mkdir app
 cd app
 mkdir $1
-cp .lando.yml ./$1
+cp ../drupal8lando.yml ./$1/.lando.yml
 cd $1 
 echo "---------------------------------"
   echo "Starting Lando"    
