@@ -1,0 +1,29 @@
+name: Drupal7
+recipe: drupal7
+config:
+  webroot: web   
+  drush: composer
+  php: '7.1'
+  xdebug: true
+proxy:
+  pma:
+    - pma.lemp.lndo.site  
+tooling:
+  git:
+    service: appserver  
+  node:
+    service: appserver
+  npm:
+    service: appserver    
+services:
+  node:
+    type: node:6.10
+    globals:
+      gulp-cli: "latest" 
+  pma:
+    type: phpmyadmin       
+events:
+  post-update:
+    - appserver: cd $LANDO_MOUNT && composer install
+    - node: cd $LANDO_MOUNT && gulp
+    - appserver: cd $LANDO_WEBROOT && drush updb -y      
