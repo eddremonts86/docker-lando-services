@@ -34,7 +34,7 @@ echo "---------------------------------"
       lando  composer require drupal/console:~1.0 --prefer-dist --optimize-autoloader  
       lando  composer require guzzlehttp/guzzle-services    
       lando  composer require cocur/slugify                                              
-      lando drupal site:install standard --langcode="en" --db-type="mysql"  --db-host="database" --db-name="drupal8$1" --db-user="drupal8" --db-pass="drupal8" --db-port="3306" --db-prefix="stevecms_" --site-name="Drupal8-Dev" --site-mail="admin@gmail.com" --account-name="admin" --account-mail="admin@gmail.com" --account-pass="admin" --force
+      #lando drupal site:install standard --langcode="en" --db-type="mysql"  --db-host="database" --db-name="drupal8$1" --db-user="drupal8" --db-pass="drupal8" --db-port="3306" --db-prefix="stevecms_" --site-name="Drupal8-Dev" --site-mail="admin@gmail.com" --account-name="admin" --account-mail="admin@gmail.com" --account-pass="admin" --force
       lando drush cr all
       lando info 
 
