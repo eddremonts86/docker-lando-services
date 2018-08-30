@@ -8,9 +8,10 @@
    sudo chmod +x install.sh  
    sudo apt-get install -f
    ./install.sh 
-   sudo systemctl status docker
+   #sudo systemctl status docker
    wget http://installer.kalabox.io/lando-latest-dev.deb
    sudo dpkg -i lando-latest-dev.deb
    cd ..
    sudo rm -r docker
-exit
+   lando  
+exit    
